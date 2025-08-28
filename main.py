@@ -4,7 +4,7 @@ import copy
 
 score=0
 
-image_folder="blocks/"
+image_folder="images/"
 
 positionX = 0
 positionY = 0
