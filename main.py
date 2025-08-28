@@ -4,6 +4,8 @@ import copy
 
 score=0
 
+image_folder="blocks/"
+
 positionX = 0
 positionY = 0
 interval=500
@@ -28,7 +30,7 @@ class grid:
     def background(self,x,y):
         for countX in range(x):
             for countY in range(y):
-                self.place_image("background.png",countX*scale,countY*scale)
+                self.place_image(f"{image_folder}background.png",countX*scale,countY*scale)
                 global filled_peices_array
                 global peices
                 if filled_peices_array == False:
@@ -219,13 +221,13 @@ class grid:
 
 #color,xStart,yStart
 colors = {
-    "I": "cyan_cube.png",
-    "O": "yellow_cube.png",
-    "T": "purple_cube.png",
-    "S": "green_cube.png",
-    "Z": "red_cube.png",
-    "J": "blue_cube.png",
-    "L": "orange_cube.png",
+    "I": f"{image_folder}cyan_cube.png",
+    "O": f"{image_folder}yellow_cube.png",
+    "T": f"{image_folder}purple_cube.png",
+    "S": f"{image_folder}green_cube.png",
+    "Z": f"{image_folder}red_cube.png",
+    "J": f"{image_folder}blue_cube.png",
+    "L": f"{image_folder}orange_cube.png",
 }
 
 shapes = {
@@ -278,7 +280,7 @@ running = True
 last_run = 0
 last_move_time = 0
 endGame=False
-shapeColor="purple_cube.png"
+shapeColor=f"{image_folder}purple_cube.png"
 
 while running:
     if endGame == False: grid.detectEndGame()
